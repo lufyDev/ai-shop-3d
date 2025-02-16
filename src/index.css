@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,600;1,900&display=swap");
 @import url("https://rsms.me/inter/inter.css");
 
@@ -14,11 +15,11 @@ html {
 }
 
 .app {
-  @apply relative w-full h-screen overflow-hidden;
+  @apply relative w-full h-screen overflow-hidden flex xl:items-center;
 }
 
 .home {
-  @apply w-fit xl:h-auto flex justify-start items-start flex-col xl:py-16 xl:px-36 sm:p-8 p-6 max-xl:gap-7 absolute z-10;
+  @apply w-fit xl:h-auto flex justify-start items-center flex-col xl:py-16 xl:px-36 sm:p-8 p-6 max-xl:gap-7 absolute z-10;
 }
 
 .home-content {
@@ -26,7 +27,7 @@ html {
 }
 
 .head-text {
-  @apply xl:text-[10rem] text-[6rem] xl:leading-[11rem] leading-[7rem] font-black text-black;
+  @apply xl:text-[10rem] text-[5rem] xl:leading-[11rem] leading-[5rem] font-black text-black;
 }
 
 .download-btn {
@@ -34,7 +35,7 @@ html {
 }
 
 .editortabs-container {
-  @apply  w-16 border-[2px] rounded-lg flex flex-col justify-center items-center ml-1 py-4 gap-4 bg-gray-200 bg-clip-padding backdrop-filter backdrop-blur-sm border-gray-200;
+  @apply  w-12 md:w-16 border-[2px] rounded-lg flex flex-col justify-center items-center ml-1 py-2 md:py-4 gap-4 bg-gray-200 bg-clip-padding backdrop-filter backdrop-blur-sm border-gray-200;
 }
 
 .filtertabs-container {
@@ -58,7 +59,7 @@ html {
 }
 
 .tab-btn {
-  @apply w-14 h-14 flex justify-center items-center cursor-pointer select-none;
+  @apply w-11 h-11 md:w-14 md:h-14 flex justify-center items-center cursor-pointer select-none;
 }
 
 . {
