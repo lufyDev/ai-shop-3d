@@ -19,9 +19,9 @@ const Home = () => {
         <AnimatePresence>
             {snap.intro && (
                 <motion.section className="home" {...slideAnimation('left')}>
-                    <motion.header {...slideAnimation('down')}>
+                    {/* <motion.header {...slideAnimation('down')}>
                         <img src="./threejs.png" alt="logo" className="w-8 h-8 object-contain" />
-                    </motion.header>
+                    </motion.header> */}
 
                     <motion.div {...headContainerAnimation}>
                         <motion.div {...headTextAnimation}>
@@ -31,7 +31,7 @@ const Home = () => {
                         </motion.div>
                         <motion.div className='flex flex-col gap-5' {...headContentAnimation}>
                             <p className='max-w-md font-normal text-gray-600 text-base'>
-                                Customize your 3D model with AI
+                                Customize your 3D shirt
                             </p>
                             <CustomButton
                                 type="filled"

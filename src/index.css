@@ -18,7 +18,7 @@ html {
 }
 
 .home {
-  @apply w-fit xl:h-full flex xl:justify-between justify-start items-start flex-col xl:py-8 xl:px-36 sm:p-8 p-6 max-xl:gap-7 absolute z-10;
+  @apply w-fit xl:h-auto flex justify-start items-start flex-col xl:py-16 xl:px-36 sm:p-8 p-6 max-xl:gap-7 absolute z-10;
 }
 
 .home-content {
@@ -34,7 +34,7 @@ html {
 }
 
 .editortabs-container {
-  @apply  w-16 border-[2px] rounded-lg flex flex-col justify-center items-center ml-1 py-4 gap-4;
+  @apply  w-16 border-[2px] rounded-lg flex flex-col justify-center items-center ml-1 py-4 gap-4 bg-gray-200 bg-clip-padding backdrop-filter backdrop-blur-sm border-gray-200;
 }
 
 .filtertabs-container {

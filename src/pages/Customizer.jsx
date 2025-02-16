@@ -40,39 +40,39 @@ const Customizer = () => {
           prompt={prompt}
           setPrompt={setPrompt}
           generatingImg={generatingImg}
-          handleSubmit={handleSubmit}
+          // handleSubmit={handleSubmit}
         />
       default:
         return null;
     }
   }
 
-  const handleSubmit = async (type) => {
-    if(!prompt) return alert("Please enter a prompt");
+  // const handleSubmit = async (type) => {
+  //   if(!prompt) return alert("Please enter a prompt");
 
-    try {
-      setGeneratingImg(true);
+  //   try {
+  //     setGeneratingImg(true);
 
-      const response = await fetch('http://localhost:8080/api/v1/dalle', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          prompt,
-        })
-      })
+  //     const response = await fetch('http://localhost:8080/api/v1/dalle', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify({
+  //         prompt,
+  //       })
+  //     })
 
-      const data = await response.json();
+  //     const data = await response.json();
 
-      handleDecals(type, `data:image/png;base64,${data.photo}`)
-    } catch (error) {
-      alert(error)
-    } finally {
-      setGeneratingImg(false);
-      setActiveEditorTab("");
-    }
-  }
+  //     handleDecals(type, `data:image/png;base64,${data.photo}`)
+  //   } catch (error) {
+  //     alert(error)
+  //   } finally {
+  //     setGeneratingImg(false);
+  //     setActiveEditorTab("");
+  //   }
+  // }
 
   const handleDecals = (type, result) => {
     const decalType = DecalTypes[type];
@@ -116,22 +116,28 @@ const Customizer = () => {
       })
   }
 
+  const handleTabClick = (tabName) => {
+    //if the tab is already active, set it to empty string
+    if(activeEditorTab === tabName) return setActiveEditorTab("");
+    setActiveEditorTab(tabName);
+  }
+
   return (
     <AnimatePresence>
       {!snap.intro && (
         <>
           <motion.div
             key="custom"
-            className="absolute top-0 left-0 z-10"
+            className="absolute top-0 left-2 z-10"
             {...slideAnimation('left')}
           >
             <div className="flex items-center min-h-screen">
-              <div className="editortabs-container tabs">
+              <div className="editortabs-container">
                 {EditorTabs.map((tab) => (
                   <Tab 
                     key={tab.name}
                     tab={tab}
-                    handleClick={() => setActiveEditorTab(tab.name)}
+                    handleClick={() => handleTabClick(tab.name)}
                   />
                 ))}
 
