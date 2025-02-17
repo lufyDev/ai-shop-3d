@@ -1,11 +1,11 @@
 <div align="center">
   <br />
-    <a href="https://youtu.be/ZqEa8fTxypQ?feature=shared" target="_blank">
-      <img src="thumbnail.png" alt="Project Banner">
+    <a href="https://ai-shop-3d.vercel.app/" target="_blank" rel="noopener noreferrer">
+      <img src="./thumbnail.png" alt="Project Banner">
     </a>
   <br />
 
-  <h3><a href="https://ai-shop-3d.vercel.app/" target="_blank" style="color: #61DAFB;">Live Demo</a></h3>
+  <h3><a href="https://ai-shop-3d.vercel.app/" target="_blank" rel="noopener noreferrer" style="color: #61DAFB;">Live Demo</a></h3>
  
   <div>
     <img src="https://img.shields.io/badge/-React_JS-black?style=for-the-badge&logoColor=white&logo=react&color=61DAFB" alt="react.js" />
