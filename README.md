@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://ai-shop-3d.vercel.app/" target="_blank" rel="noopener noreferrer">
-      <img src="./thumbnail.png" alt="Project Banner">
+      <img src="public/thumbnail.png" alt="Project Banner">
     </a>
   <br />
 
