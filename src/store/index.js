@@ -7,6 +7,7 @@ const state = proxy({
     isFullTexture: false,
     logoDecal: './threejs.png',
     fullDecal: './full.jpg',
+    activeEditorTab: "",
 })
 
 export default state;
