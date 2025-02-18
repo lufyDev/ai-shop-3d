@@ -150,12 +150,20 @@ const Customizer = () => {
             className="absolute z-10 top-5 right-5"
             {...fadeAnimation}
           >
-            <CustomButton 
-              type="filled"
-              title="Go Back"
-              handleClick={() => state.intro = true}
-              customStyles="w-fit px-4 py-2.5 font-bold text-base cursor-pointer"
-            />
+            <div className="flex gap-3">
+              <CustomButton 
+                type="filled"
+                title="Download"
+                handleClick={downloadCanvasToImage}
+                customStyles="w-fit px-4 py-2.5 font-bold text-base cursor-pointer"
+              />
+              <CustomButton 
+                type="filled"
+                title="Go Back"
+                handleClick={() => state.intro = true}
+                customStyles="w-fit px-4 py-2.5 font-bold text-base cursor-pointer"
+              />
+            </div>
           </motion.div>
 
           <motion.div
